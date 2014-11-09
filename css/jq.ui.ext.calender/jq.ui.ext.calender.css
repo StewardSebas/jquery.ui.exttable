@@ -1,0 +1,72 @@
+﻿.ext-cal {
+    border: 2px #006400 solid;
+    background-color : rgba(0,128,0,0.2);
+    border-collapse: collapse;
+    border-radius : 10px;
+}
+
+.ext-cal-header {
+    border-bottom: 1px #006400 solid;
+    border-right: 1px #006400 solid;
+}
+.ext-cal-day {
+    background-image : url('./images/leaf.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    border-color : black;
+    width : 150px;
+    height : 200px;
+    text-align : left;
+    vertical-align : top;
+    border-bottom:solid 1px #bbb;
+    border-right:solid 1px #bbb;
+
+}
+.ext-cal-sun-header {
+    background-color:orangered;
+    color : white;
+}
+.ext-cal-sat-header {
+    background-color:darkblue;
+    color : white;
+}
+.ext-cal-day-header {
+    background-color: #fafffa;
+    color : black;
+}
+.ext-cal-week {
+    color : black;
+}
+.ext-cal-sun {
+    color:orangered;
+}
+
+.ext-cal-sat {
+    color:blue;
+}
+.ext-cal-transparent {
+    filter:alpha(opacity=40);
+    -moz-opacity:0.4;
+    -khtml-opacity: 0.4;
+    opacity:0.4;
+}
+
+.ext-cal-separator{
+    margin:0px;
+    height: 1px;
+    border: none;
+    border-top: 1px #000000 dashed;
+}
+.ext-cal-datenumber{
+    text-align : left;
+    vertical-align : top;
+    font-size: x-large;
+    background-color : rgba(192,255,192,1);
+}
+.ext-cal-string {
+    color:black;
+    font-size: medium;
+    background-color : rgba(47,79,79,0.2);
+    border-radius : 5px;
+    font-size: large;
+}

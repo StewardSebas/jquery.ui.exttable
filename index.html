@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <link rel='stylesheet' href='css/le-frog/jquery-ui-1.9.2.custom.min.css'>
+        <link rel='stylesheet' href='css/jq.ui.ext.calender/jq.ui.ext.calender.css'>
+        <script type='text/javascript' src='js/jquery-1.9.1.min.js'></script>
+        <script type='text/javascript' src='js/jquery-ui-1.9.2.custom.min.js'></script>
+        <script type='text/javascript' src='js/jq.ui.ext.table.js'></script>
+        <script type='text/javascript' src='js/jq.ui.ext.calender.js'></script>
+        <script>
+            $(document).ready(function(){
+                var cal = $('#calender').ext_calender({
+                    separator:true,
+                    click: function( object , params ) {
+                        console.log(params['date'].toLocaleString());
+                    }
+                });
+                var today = new Date();
+                $('#year').val(today.getFullYear()).spinner({
+                    spin: function( event, ui ) {
+                        cal.Year(ui.value);
+                    }
+                });
+                $('#month').val(today.getMonth()+1).spinner({max:12,min:1 ,
+                    spin: function( event, ui ) {
+                        cal.Month(ui.value);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div align='center'>
+            <input style ='width:50px' type='text' id='year' readonly='true' />
+            <input style ='width:50px' type='text' id='month' readonly='true' />
+            <table id='calender'></table>
+        </div>
+    </body>
+</html>
